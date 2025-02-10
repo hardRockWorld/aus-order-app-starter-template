@@ -115,6 +115,7 @@ A modern order management application built with Vue 3 and TypeScript, featuring
 
 - Node.js 16.x or higher
 - npm 7.x or higher
+- Typescript 5.5.4 (for support of @typescript-eslint)
 
 ## License
 
