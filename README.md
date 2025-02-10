@@ -55,6 +55,31 @@ A modern order management application built with Vue 3 and TypeScript, featuring
 	 npm run lint
 	 ```
 
+6. **Fix Linting Issues**
+	 ```bash
+	 npm run lint:fix
+	 ```
+
+7. **Type Checking**
+	 ```bash
+	 npm run type-check
+	 ```
+
+8. **Format Code**
+	 ```bash
+	 npm run format
+	 ```
+
+9. **Check Code Formatting**
+	 ```bash
+	 npm run format:check
+	 ```
+
+10. **Clean Build Artifacts**
+	 ```bash
+	 npm run clean
+	 ```
+
 ## Project Structure
 
 - `src/` - Source files
@@ -69,16 +94,22 @@ A modern order management application built with Vue 3 and TypeScript, featuring
 ## Development Tools
 
 - ESLint for code linting
+- Prettier for code formatting
 - TypeScript for type checking
 - Vite for fast development and building
 - PostCSS and Autoprefixer for CSS processing
 
 ## Scripts
 
-- `dev`: Start development server
-- `build`: Build for production
-- `preview`: Preview production build
-- `lint`: Lint and fix files
+- `dev`: Start the development server using Vite.
+- `build`: Type-check and build the application for production.
+- `preview`: Preview the production build locally.
+- `lint`: Lint the codebase using ESLint.
+- `lint:fix`: Automatically fix linting issues.
+- `type-check`: Perform type checking with TypeScript.
+- `format`: Format the code using Prettier.
+- `format:check`: Check the code formatting without making changes.
+- `clean`: Remove the `dist` directory to clean up the build artifacts.
 
 ## Requirements
 

@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import { useAuthStore } from '../stores/auth'
+import { createRouter, createWebHistory } from 'vue-router';
+import { useAuthStore } from '../stores/auth';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,21 +12,21 @@ const router = createRouter({
           path: '',
           name: 'dashboard',
           component: () => import('../views/Dashboard.vue'),
-          meta: { requiresAuth: true }
+          meta: { requiresAuth: true },
         },
         {
           path: 'orders',
           name: 'orders',
           component: () => import('../views/Orders.vue'),
-          meta: { requiresAuth: true }
+          meta: { requiresAuth: true },
         },
         {
           path: 'customers',
           name: 'customers',
           component: () => import('../views/Customers.vue'),
-          meta: { requiresAuth: true }
-        }
-      ]
+          meta: { requiresAuth: true },
+        },
+      ],
     },
     {
       path: '/auth',
@@ -35,21 +35,21 @@ const router = createRouter({
         {
           path: 'login',
           name: 'login',
-          component: () => import('../views/Login.vue')
-        }
-      ]
-    }
-  ]
-})
+          component: () => import('../views/Login.vue'),
+        },
+      ],
+    },
+  ],
+});
 
 router.beforeEach((to, _from, next) => {
-  const authStore = useAuthStore()
-  
-  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
-    next({ name: 'login' })
-  } else {
-    next()
-  }
-})
+  const authStore = useAuthStore();
 
-export default router
+  if (to.meta.requiresAuth && !authStore.isAuthenticated) {
+    next({ name: 'login' });
+  } else {
+    next();
+  }
+});
+
+export default router;

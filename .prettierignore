@@ -1,0 +1,8 @@
+dist
+node_modules
+*.log
+.git
+.gitignore
+package-lock.json
+pnpm-lock.yaml
+yarn.lock 
